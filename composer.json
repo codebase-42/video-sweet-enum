@@ -1,0 +1,15 @@
+{
+    "name": "codebase42/video-sweet-enum",
+    "autoload": {
+        "psr-4": {
+            "Codebase42\\VideoSweetEnum\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Leo Oberle",
+            "email": "leocello@gmail.com"
+        }
+    ],
+    "require": {}
+}
