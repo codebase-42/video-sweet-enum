@@ -1,3 +1,3 @@
-# Swetet-enum
+# Sweet-enum
 
 ...
