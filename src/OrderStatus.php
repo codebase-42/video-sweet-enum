@@ -2,55 +2,70 @@
 
 namespace Codebase42\VideoSweetEnum;
 
-enum OrderStatus: string
+use Leocello\SweetEnum\SweetCase;
+use Leocello\SweetEnum\SweetEnum;
+use Leocello\SweetEnum\SweetEnumContract;
+
+/**
+ * @method string color()
+ * @method string description()
+ * @method array canChangeFrom()
+ */
+enum OrderStatus: string implements SweetEnumContract
 {
+    use SweetEnum;
+
+    public const self DEFAULT = self::Pending;
+
+    #[SweetCase(
+        color: 'orange',
+        description: 'Your order is pending',
+        canChangeFrom: [
+            ///
+        ],
+    )]
     case Pending = 'pending';
+
+    #[SweetCase(
+        color: 'yellow',
+        description: 'Currently being processed',
+        canChangeFrom: [
+            self::Pending,
+        ],
+    )]
     case Processing = 'processing';
+
+    #[SweetCase(
+        color: 'blue',
+        description: 'Your order will be with you shortly',
+        canChangeFrom: [
+            self::Processing,
+        ],
+    )]
     case Shipped = 'shipped';
+
+    #[SweetCase(
+        color: 'green',
+        description: 'Your order has been delivered',
+        canChangeFrom: [
+            self::Shipped,
+        ],
+    )]
     case Delivered = 'delivered';
+
+    #[SweetCase(
+        color: 'gray',
+        description: 'Cancelled',
+        canChangeFrom: [
+            self::Pending,
+            self::Processing,
+            self::Shipped,
+        ],
+    )]
     case Cancelled = 'cancelled';
-
-    public function label(): string
-    {
-        return match ($this) {
-            self::Pending => 'Pending',
-            self::Processing => 'Processing',
-            self::Shipped => 'Shipped',
-            self::Delivered => 'Delivered',
-            self::Cancelled => 'Cancelled',
-        };
-    }
-
-    public function color(): string
-    {
-        return match ($this) {
-            self::Pending => 'orange',
-            self::Processing => 'yellow',
-            self::Shipped => 'blue',
-            self::Delivered => 'green',
-            self::Cancelled => 'gray',
-        };
-    }
-
-    public function description(): string
-    {
-        return match ($this) {
-            self::Pending => 'Your order is pending',
-            self::Processing => 'Currently being processed',
-            self::Shipped => 'Your order will be with you shortly',
-            self::Delivered => 'Your order has been delivered',
-            self::Cancelled => 'Cancelled',
-        };
-    }
 
     public function canChangeTo(self $newStatus): bool
     {
-        return match ($newStatus) {
-            self::Pending => false,
-            self::Processing => $this == self::Pending,
-            self::Shipped => $this == self::Processing,
-            self::Delivered => $this == self::Shipped,
-            self::Cancelled => !in_array($this, [self::Delivered, self::Cancelled]),
-        };
+        return in_array($this, $newStatus->canChangeFrom());
     }
 }
