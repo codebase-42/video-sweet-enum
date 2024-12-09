@@ -21,10 +21,10 @@ Por quê "Codebase 42"?
 
 🎥 Vídeos recomendados:  
 🔹Dominando enums! 🚀 Torne Seu Código Mais Limpo e Organizado Agora   
-https://www.youtube.com/watch?v=pz2GSH1w_ko&list=PLEtHMuppeUUCbZk7aCq1AqRzzAWTSYWWv&index=4&t=3s  
+[https://www.youtube.com/watch?v=pz2GSH1w_ko](https://www.youtube.com/watch?v=pz2GSH1w_ko&list=PLEtHMuppeUUCbZk7aCq1AqRzzAWTSYWWv&index=4&t=3s)  
 
 🔹PHP 8.4: Diga Adeus aos Getters e Setters com Property Hooks!  
-https://www.youtube.com/watch?v=PrzEYXBtj1o&list=PLEtHMuppeUUCbZk7aCq1AqRzzAWTSYWWv&index=1&t=4s  
+[https://www.youtube.com/watch?v=PrzEYXBtj1o](https://www.youtube.com/watch?v=PrzEYXBtj1o&list=PLEtHMuppeUUCbZk7aCq1AqRzzAWTSYWWv&index=1&t=4s)  
 
 💡 Deixe nos comentários o que você achou e quais temas gostaria de assistir nos próximos vídeos!  
 
