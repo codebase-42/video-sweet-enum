@@ -29,3 +29,7 @@ Por quê "Codebase 42"?
 💡 Deixe nos comentários o que você achou e quais temas gostaria de assistir nos próximos vídeos!  
 
 🚀 Inscreva-se no canal Codebase 42 para mais conteúdos sobre PHP, Laravel e desenvolvimento de software em geral!  
+
+---
+
+#PHP #SweetEnum #Enums #ProgramaçãoPHP #DesenvolvimentoWeb #Codebase42 #EnumsPHP #Produtividade #OpenSource #codequality
